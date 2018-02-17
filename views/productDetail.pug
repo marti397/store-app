@@ -1,0 +1,22 @@
+extends layout
+block content
+    div(id='main')
+        include main_navigation.pug
+        div(class='container productDetailContainer')
+            div(class='row')
+                div(class='col-9')
+                    div(class='colImgRight')
+                        img(class="imgDetail mySlides", src=oneProduct.imagePath)
+                        img(class="imgDetail mySlides",src="/images/ringsPics/ring7.jpg")
+                        img(class="imgDetail mySlides",src="/images/ringsPics/ring8.jpg")
+                    div(class="colImgLeft")
+                        img(class="sideImgDetail demo w3-opacity w3-hover-opacity-off" src=oneProduct.imagePath onclick="currentDiv(1)")
+                        img(class="sideImgDetail demo w3-opacity w3-hover-opacity-off" src="/images/ringsPics/ring7.jpg" onclick="currentDiv(2)")
+                        img(class="sideImgDetail demo w3-opacity w3-hover-opacity-off" src="/images/ringsPics/ring8.jpg" onclick="currentDiv(3)")
+                div(class='col')
+                    - var prodId = "/add-to-cart/" + oneProduct.id
+                    a(href=prodId, class='imgBtn productText') agregar
+                    div(class='productText') producto/ #{oneProduct.title}
+                    div(class='productText') precio/ &#36;#{oneProduct.price}
+                    div(class='productText') descripcion/ #{oneProduct.description}
+                    div(class='productText') categoria/ #{oneProduct.category}

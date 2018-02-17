@@ -1,0 +1,20 @@
+div(id='userControl')
+  div(id='shopCartIcon')
+    a(href='/shopping-cart', class='navBtn shopCartIconLink')
+      i(class='fas fa-shopping-bag', aria-hidden="true")
+      if session.cart
+        div(class='shopBadge') #{session.cart.totalQty}
+        //input(type="text", name="txt", id='txt', value=session.cart.totalQty)
+    if login
+      div(class='nameUser') 
+        div Hola
+        div Christopher
+  a(href='/product/todo#socialPanel', id='myHelp') ayuda
+  div(id='userIcon')
+    if login
+      a(href='/user/profile', class='navBtn')
+        i(class='fa fa-user', aria-hidden="true")
+      a(href="/user/logout", class="exitBtn") Salir
+    else
+      a(href='/user/userselect', class='navBtn')
+        i(class='fa fa-user', aria-hidden="true")

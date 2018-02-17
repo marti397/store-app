@@ -1,0 +1,25 @@
+extends ../layout
+block content
+    div(id='main')
+        a(href='../product/todo', id="tienda") regresar a la tienda
+        div(id="mainHeader")
+            a(href='/') collare
+        div(class='row')
+            div(class='col')
+            div(class='col-5')
+                div(class='subTitle') registrate
+                if hasErrors
+                    div(class='alert alert-danger')
+                        each item in messages
+                            p #{item}
+                form(action='/user/signup', method='post')
+                    div(class='form-group')
+                        label(for='email', class='textLabelForm') registrar correo electronico
+                        input(type='text', id='email', name='email', class='form-control', value='ejemplo: juan@gmail.com', onfocus="this.value=''")
+                    div(class='form-group')
+                        label(for='password', class='textLabelForm') crear contraseña, 4 caracteres como mínimo
+                        input(type='password', id='password', name='password', class='form-control')
+                    input(type="hidden" name='_csrf' value= csrfToken)
+                    button(type='submit' class='btn btn-success') registrar
+                    a(href='/user/login', type='button', class='btn') usuario existente
+            div(class='col')

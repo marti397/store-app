@@ -1,0 +1,548 @@
+/** ALL DEFAULT LINKS **/
+a:link {
+  text-decoration: none;
+  color: black;
+}
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: #ff4d4d;
+}
+a:active {
+  text-decoration: none;
+}
+/** MAIN BODY **/
+#main {
+  width:1000px;
+	margin-left:auto;
+  margin-right:auto;
+  font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+/** FRONT PAGE **/
+.transition{
+  width: 100%;
+  height: 30%;
+  padding-top: 0px;
+  overflow:hidden;  
+  transition: all 0.3s linear;
+  margin-top:50%;
+	position:absolute;
+  background-color:white;
+  opacity: 0.7;
+  text-align: center;
+  color:black;
+  letter-spacing: 2px;
+  font-weight:lighter;
+  font-size: 36px;
+}
+.transition:hover{
+  margin-top:0px;
+  height:100%;
+  padding-top: 10%;
+}
+.explore{
+  border: solid 1px;
+  padding: 40px;
+}
+/** NAVIGATION ICONS **/
+.navBtn{
+  font-size: 28px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  text-align:center;
+  background:white;
+  margin-right: 10px;
+  padding-top: 0px;
+  float: right;
+  border: 1px solid #ff4d4d;
+}
+a.navBtn:link, a.navBtn:visited{
+  color:#ff4d4d;
+}
+a.navBtn:hover, a.navBtn:active{
+  background:#ff4d4d;
+  color:white;
+  border-color:white
+}
+#userIcon, #shopCartIcon{
+  float: right;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  font-weight:lighter;
+}
+#shopCartIcon{
+  margin-right: 100px;
+}
+.shopBadge{
+  font-size: 16px;
+  color:white;
+  font-weight: bolder;
+  z-index:3;
+  position:relative;
+  top:-28px;
+}
+/** user info next to user icon **/
+.nameUser{
+  color: #383838;
+  padding-top:7px;
+  font-size: 10px;
+  margin-right: 80px;
+}
+/** exit button **/
+.exitBtn{
+  background-color: white;
+  border: 1px solid #ff4d4d;
+  padding: 5px;
+  text-align: center;
+  display: inline-block;
+  font-size: 14px;
+  margin: 7px 5px 0px 0px;
+  border-radius: 8px;
+}
+a.exitBtn:link, a.exitBtn:visited{
+  color:#ff4d4d;
+}
+a.exitBtn:hover, a.exitBtn:active{
+  background:#ff4d4d;
+  color:white;
+  border-color:white
+}
+/** COLLARE HEAD **/
+#mainHeader{
+  text-align: center;
+  letter-spacing: 2px;
+  margin: -5px;
+  font-weight:lighter;
+  font-size: 40px;
+}
+.productTitle{
+  letter-spacing: 2px;
+  font-weight:lighter;
+  font-size: 36px;
+}
+/** ITEM LIST: anillos, collares, etc. **/
+#mainNavigation{
+  list-style-type: none;
+  margin: 15px 0 15px 0;
+  padding: 0 0 5px 0;
+  font-weight:lighter;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  /**border-bottom: .5px solid gray;**/
+}
+#mainNavigation li{
+  display: inline;
+  padding: 0px 50px 0px 50px;
+}
+/** MAIN PAGE PANELS **/
+#panelOne, #panelThree{
+  width: 25%;
+  float: left;
+}
+#panelTwo{
+  width: 50%;
+  float: left;
+}
+#picOne{
+  width: 100%;
+  height: 325px;
+  background-color:#ffb3ba;
+  margin: 5px 5px 0px 0px;
+  position: relative;
+}
+#picTwo{
+  width: 100%;
+  height: 225px;
+  background-color:#ffdfba;
+  margin: 5px 5px 0px 0px;
+  position: relative;
+}
+#picThree{
+  width: 100%;
+  height: 555px;
+  background-color: #f1cbff;
+  margin: 5px;
+  position: relative;
+}
+#picFour{
+  width: 100%;
+  height: 225px;
+  background-color: #baffc9;
+  margin: 5px 0px 0px 10px;
+  position: relative;
+}
+#picFive{
+  width: 100%;
+  height: 325px;
+  background-color: #bae1ff;
+  margin: 5px 0px 0px 10px;
+  position: relative;
+}
+/** SUSCRIBE PANEL **/
+#socialPanel{
+  clear:left;
+  padding-top: 30px;
+}
+#socialOne{
+  width: 30%;
+  height: 60px;
+  float: left;
+  text-align: center;
+  margin-left: 50px;
+}
+.mySocialFab{
+  margin-left: 30px;
+}
+#socialTwo{
+  width: 40%;
+  height: 60px;
+  float: left;
+}
+#emailText{
+  font-size: 16px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  padding: 0px 0px 3px 0px;
+}
+#emailInput{
+  font-size: 14px;
+  width: 370px;
+  padding-left: 3px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  border: 0.5px black solid;
+}
+#socialThree{
+  width: 5%;
+  height: 60px;
+  float: left;
+}
+.subscribeBtn{
+  background-color: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 15px;
+  font-weight: lighter;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 20px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+#bottomPanel{
+  clear: left;
+  height: 200px;
+  background-color: #383838;
+  color: white;
+}
+.bottomPanelText{
+  font-weight: lighter;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+/** LOG IN - SUBSCRIBE PAGE**/
+.userBtn{
+  background-color: white;
+  border: 1px solid #ff4d4d;
+  padding: 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  border-radius: 8px;
+  margin-top:100px;
+}
+a.userBtn:link, a.userBtn:visited{
+  color:#ff4d4d;
+}
+a.userBtn:hover, a.userBtn:active{
+  background:#ff4d4d;
+  color:white;
+  border-color:white
+}
+#tienda{
+  letter-spacing: 2px;
+  font-weight: 200;
+  font-size: 18px;
+  border: 0.5px solid;
+  padding:0px 10px 10px 10px;
+}
+/** ALL PRODUCTS**/
+.productContainer{
+  margin-bottom: 80px;
+}
+#newProductTag{
+  z-index:3;
+  position:relative;
+  top:-28px;
+  width: 70px;
+  color: white;
+  background-color: #5cb85c;
+  opacity: 0.8;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight:200;
+  margin-bottom: -20px;
+}
+.imgProduct{
+  /*height:250px;*/
+  /*width:250px;*/
+  height: 150px;
+  width: 150px;
+}
+.imgText{
+  letter-spacing: 2px;
+  font-weight: 200;
+  margin-bottom: 10px;
+}
+.imgBtn{
+  letter-spacing: 2px;
+  font-weight:200;
+  border: 1px solid #ff4d4d;
+  padding: 5px;
+  margin: 15px 50px 5px 0px;
+}
+a.imgBtn:link, a.imgBtn:visited{
+  color:#ff4d4d;
+}
+a.imgBtn:hover, a.imgBtn:active{
+  background:#ff4d4d;
+  color:white;
+  border-color:white
+}
+/** LOG IN FORMS**/
+.subTitle{
+  letter-spacing: 2px;
+  margin-top: 25px;
+  margin-bottom:10px;
+  font-weight:lighter;
+  font-size: 30px;
+}
+.textLabelForm, .btn{
+  letter-spacing: 2px;
+  margin-top: 25px;
+  font-weight:lighter;
+  font-size: 20px;
+}
+#email{
+  font-weight: 200;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+.divTextHead{
+  letter-spacing: 2px;
+  margin-top: 25px;
+  font-weight:lighter;
+  font-size: 30px;
+}
+/**CART PAGE**/
+.cartText{
+  letter-spacing: 2px;
+  font-weight:lighter;
+  font-size: 18px;
+}
+.plusMinusBox{
+  border: 0.5px solid;
+  padding: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius:25px;
+}
+.imgCartPreCheckout{
+  height: 60px;
+  width: 60px;
+  margin:5px;
+}
+.totalPrice{
+  letter-spacing: 2px;
+  margin-top: 15px;
+  font-weight:lighter;
+  font-size: 26px;
+}
+.myListGroupItem{
+  border:none;
+  margin-top:15px;
+}
+/*PRODUCT DETAIL PAGE*/
+.productDetailContainer{
+  margin-top:80px;
+}
+.productText{
+  letter-spacing: 2px;
+  margin-top: 15px;
+  font-weight:lighter;
+  font-size: 26px;
+}
+.imgDetail{
+  height:500px;
+  width:500px;
+}
+.sideImgDetail{
+  height:150px;
+  width:150px;
+  display: block;
+  margin-bottom: 10px;
+}
+.mySlides{display:none}
+.demo{cursor:pointer}
+.colImgRight{
+  width: 70%;
+  float:right;
+}
+.colImgLeft{
+  width: 30%;
+}
+.w3-opacity{
+  opacity: 0.5;
+}
+.w3-opacity-off{
+  opacity: 1;
+}
+.w3-opacity:hover{
+  opacity: 1;
+}
+/*PROFILE PAGE*/
+.userInfo{
+  letter-spacing: 2px;
+  margin-top: 15px;
+  font-weight:lighter;
+  font-size: 30px;
+}
+/* Style the tab */
+div.tab {
+  overflow: hidden;
+  clear: both;
+}
+/* Style the buttons inside the tab */
+div.tab button {
+  letter-spacing: 2px;
+  font-weight:lighter;
+  cursor: pointer;
+  font-size: 18px;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  text-align:center;
+  background:white;
+  padding-top: 0px;
+  float: left;
+  border: 0.5px solid black;
+  margin-left:auto;
+  margin-right:auto;
+}
+/* Change background color of buttons on hover */
+div.tab button:hover {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+}
+/* Create an active/current tablink class */
+div.tab button.active {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+}
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding-left: 30px;
+}
+.myList{
+  clear: both;
+  padding-top: 30px;
+}
+.myList > div{
+  padding-bottom: 4px;
+}
+#leftPanel{
+  width: 50%;
+  float: left;
+}
+#rightPanel{
+  width: 50%;
+  float: left;
+}
+.accordion-toggle {
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-weight:lighter;
+  font-size: 22px;
+}
+.accordion-content {display: none;}
+.accordion-content.default {display: block;}
+button.accordion-toggle{
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  border:none;
+  font-size: 20px;
+  border-radius: 8px;
+}
+button.accordion-toggle:hover {
+  background-color: #ff4d4d;
+  color: white;
+  border-color: white;
+}
+button.accordion-toggle.active {
+  background-color: #ff4d4d;
+  color: white;
+  border-color: white;
+}
+.accordion-content{
+  border: 0.5px solid #ff4d4d;
+  margin-top:15px;
+  margin-right: 10px;
+  padding: 10px 10px 10px 10px;
+}
+.orderText{
+  letter-spacing: 2px;
+  font-weight:lighter;
+  font-size: 20px;
+}
+.myIndentText{
+  text-indent: 70px;
+}
+/*CHECKOUT PAGE*/
+.form-group{
+  letter-spacing: 2px;
+  font-weight:lighter;
+  font-size: 20px;
+}
+.form-control{
+  letter-spacing: 2px;
+  font-weight:lighter;
+  font-size: 14px;
+  color:gray;
+}
+.checkoutCards{
+  margin-right: 10px;
+  margin-top: 10px;
+}
+.autoClick{
+  visibility: hidden;
+  display: none;
+}
+#exampleModalLabel{
+  letter-spacing: 2px;
+  font-weight:lighter;
+  font-size: 30px;
+}
+.modal-body{
+  letter-spacing: 2px;
+  font-weight:lighter;
+  font-size: 20px;
+}
+/*HELP LINK*/
+#myHelp{
+  letter-spacing: 2px;
+  font-weight:lighter;
+  font-size: 20px;
+  margin-left:100px;
+  border: 0.5px solid;
+  padding: 2px;
+}

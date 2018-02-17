@@ -1,0 +1,40 @@
+extends layout
+block content
+    div(id='main')
+        include main_navigation.pug
+        div(class='productTitle')= allProducts
+        div(class='container')
+            div(class='row')
+                div(class='colSelector col-2') filtros
+                div(class='colSelector col-10')
+                    div(class='row')
+                        each item in products
+                            div(class='colSelector col-3 productContainer')
+                                img(src=item.imagePath, class='imgProduct')
+                                div( id='newProductTag') nuevo
+                                div(class='imgText') #{item.title}
+                                div(class='imgText') &#36;#{item.price}
+                                - var prodDetail = '/product/' + item.id + '/detail'
+                                a(href=prodDetail, class='imgBtn') detalles
+                                - var prodId = "/add-to-cart/" + item.id
+                                br
+                                br
+                                a(href=prodId, class='imgBtn') agregar
+            - var ask = true
+            button(type="button" class="autoClick" data-toggle="modal" data-target="#exampleModal") exito
+            if successMsg
+                div(class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+                    div(class="modal-dialog" role="document")
+                        div(class="modal-content")
+                            div(class="modal-header")
+                                div(class="modal-title" id="exampleModalLabel") compra exitosa!
+                                button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                                    span(aria-hidden="true") &times;
+                            div(class="modal-body") 
+                                | para checar tu orden, visita tu 
+                                a(href='/user/profile') perfil 
+                                |y luego ve a 'ordenes'
+                            div(class="modal-footer")
+                                button(type="button" class="btn btn-success" data-dismiss="modal") continuar
+        include social_panel.pug
+    include bottom_panel.pug

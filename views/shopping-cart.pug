@@ -1,0 +1,41 @@
+extends layout
+block content
+    div(id='main')
+        include main_navigation.pug
+        if products
+            div(class='row')
+                div(class='col-8')
+                    ul(class='list-group cartList')
+                    each item in products
+                        li(class='list-group-item myListGroupItem')
+                            - var reduceItem = "/reduce/" + item.item._id
+                            - var addItem = "/add/" + item.item._id
+                            - var removeItem = "/remove/" + item.item._id
+                            - var prodDetail = '/product/' + item.item._id + '/detail'
+                            a(href=prodDetail)
+                                img(src=item.item.imagePath, alt='photo', class='imgCartPreCheckout')
+                            span(class='cartText')
+                                | &#36;#{item.item.price} x #{item.qty} unidades  
+                                a(href=reduceItem, class='plusMinusBox') &#45;1 
+                                a(href=addItem, class='plusMinusBox') &#43;1
+                                | &#61; &#36;#{item.price}          
+                                a(href=removeItem, class='plusMinusBox')  borrar
+                                br
+                                a(href=prodDetail) #{item.item.title}
+                div(class='col-4 totalPrice')
+                    - var productTax =  Number((totalPrice * 0.16).toFixed(2));
+                    - var totalWithTax = totalPrice + productTax
+                    - var shipping = 30
+                    | productos &#36;#{totalPrice}
+                    br
+                    | iva &#36;#{productTax}
+                    br
+                    | envio &#36;#{shipping}
+                    br
+                    | total &#36;#{totalWithTax}
+                    br
+                    a(href='/checkout', type='button', class='btn btn-success') continuar
+        else
+            div(class='row')
+                div(class='col-6 offset-md-3')
+                    div(class='divTextHead') no hay articulos en el carrito

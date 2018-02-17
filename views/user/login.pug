@@ -1,0 +1,25 @@
+extends ../layout
+block content
+    div(id='main')
+        a(href='../product/todo', id="tienda") regresar a la tienda
+        div(id="mainHeader")
+            a(href='/') collare
+        div(class='row')
+            div(class='col')
+            div(class='col-5')
+                div(class='subTitle') ingresar
+                if hasErrors
+                    div(class='alert alert-danger')
+                        each item in messages
+                            p #{item}
+                form(action='/user/login', method='post')
+                    div(class='form-group')
+                        label(for='email', class='textLabelForm') correo electronico
+                        input(type='text', id='email', name='email', class='form-control')
+                    div(class='form-group')
+                        label(for='password', class='textLabelForm') contraseña
+                        input(type='password', id='password', name='password', class='form-control')
+                    input(type="hidden" name='_csrf' value= csrfToken)
+                    button(type='submit' class='btn btn-success') entrar
+                    a(href='/user/signup', type='button', class='btn') registrate
+            div(class='col')

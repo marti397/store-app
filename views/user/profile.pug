@@ -1,0 +1,40 @@
+extends ../layout
+block content
+    div(id='main')
+        include ../main_navigation.pug
+        div(class='row')
+            div(class='col')
+                div(class='userInfo') #{userInfo}
+                div(class="tab")
+                    div(class='row')
+                        div(class='col offset-3')
+                            button(class="tablinks" onclick="openTab(event, 'orders')") ordenes 
+                        div(class='col')
+                            button(class="tablinks" onclick="openTab(event, 'profile')") perfil
+                div(id="orders" class="tabcontent")
+                    div(id="accordion")
+                        each order in orders
+                            div(class="myList")
+                                div(class='orderText') numero de orden/ #{order._id}
+                                div(class='orderText') total de la orden/ &#36;#{order.cart.totalPrice}
+                                button(class="accordion-toggle") 
+                                    span(id='detailSignPlusMinus') &#43; 
+                                    | detalles
+                                div(class="accordion-content")
+                                    div(class='orderText') total de productos ordenados/ #{order.cart.totalQty}
+                                    div(class='orderText') direccion de envio/ #{order.address}
+                                    div(class='orderText') fecha de compra/ Marzo 1, 2018
+                                    div(class='orderText') fecha de envio/ Marzo 2, 2018
+                                    div(class='orderText') numero de guia/ fedex 143849
+                                    div(class='orderText') fecha de entrega/ Marzo 4, 2018
+                                    div(class='orderText') nombre del destinatario/ #{order.name}
+                                    div(class='orderText') detalles de la compra/
+                                    each item in order.items
+                                        div(class='orderText myIndentText') #{item.item.title} x #{item.qty} unidades &#61; &#36; #{item.price}
+                div(id="profile" class="tabcontent")
+                    div(id="leftPanel")
+                        div(class="myList")
+                            div(class='orderText') correo/ #{userInfo}
+                    div(id="rightPanel")
+                        div(class="myList")
+                            div(class='orderText') usuario/ chris

@@ -1,0 +1,54 @@
+extends layout
+block content
+    div(id='main')
+        include main_navigation.pug
+        div(class='row')
+            div(class='col-5')
+                div(class='productText') finalizar
+                div(class='productText') total: &#36;#{total}
+                div(class='productText') debito, credito o prepago
+                div
+                    i(class="fab fa-cc-mastercard fa-3x checkoutCards")
+                    i(class="fab fa-cc-visa fa-3x checkoutCards") 
+                    i(class="fab fa-cc-amex fa-3x checkoutCards") 
+                    i(class="fab fa-cc-discover fa-3x checkoutCards")
+
+            div(class='col-7')
+                if noErrors
+                    div(id='charge-error', class='alert alert-danger invisible')
+                else
+                    div(id='charge-error', class='alert alert-danger') #{errMsg}
+                form(action='/checkout', method='post' id='checkout-form')
+                    div(class='row')
+                        div(class='col-12')
+                            div(class='form-group')
+                                label(for='name') nombre del destinatario
+                                input(type="text", class="form-control", id='name', required, name='name', value='ejemplo/ juan anaya', onfocus="this.value=''")
+                        div(class='col-12')
+                            div(class='form-group')
+                                label(for='address') direccion de envio
+                                input(type="text", class="form-control", id='address', required, name='address', value='ejemplo/ avenida insurgentes #20 benito juarez 03920 CDMX', onfocus="this.value=''")
+                        hr
+                        div(class='col-12')
+                            div(class='form-group')
+                                label(for='card-name') nombre en la tarjeta
+                                input(type="text", class="form-control", id='card-name', required, value='ejemplo/ juan anaya', onfocus="this.value=''")
+                        div(class='col-8')
+                            div(class='form-group')
+                                label(for='card-number') numero de tarjeta
+                                input(type="text", class="form-control", id='card-number', required, onfocus="this.value=''", value='ejemplo/ 371449635398431')
+                        div(class='col-4')
+                            div(class='form-group')
+                                label(for="card-cvc") cvc
+                                input(type="text", class="form-control", id='card-cvc', required, onfocus="this.value=''", value='ejemplo/ 342')
+                        div(class='col-6')
+                            div(class='form-group')
+                                label(for="card-expiry-month") mes de expiración
+                                input(type="text", class="form-control", id='card-expiry-month', required, onfocus="this.value=''", value='ejemplo/ 08')
+                        div(class='col-6')
+                            div(class='form-group')
+                                label(for="card-expiry-year") año de expiración
+                                input(type="text", class="form-control", id='card-expiry-year', required, onfocus="this.value=''", value='ejemplo/ 2025')
+                    button(type='submit', class='btn btn-success') comprar
+    script(type="text/javascript", src='javascripts/checkout.js')
+
